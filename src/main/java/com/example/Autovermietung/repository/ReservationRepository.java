@@ -1,0 +1,10 @@
+package com.example.Autovermietung.repository;
+
+import com.example.Autovermietung.Entities.Reservation;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ReservationRepository extends JpaRepository<Reservation,Long> {
+    List<Reservation> findByUserId(Long userId);
+}
